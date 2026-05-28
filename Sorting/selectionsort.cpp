@@ -5,15 +5,7 @@ void swap(int arr[],int min,int i){
     arr[i]=arr[min];
     arr[min]=temp;
 }
-int main(){
-    int n;
-    cout << "enter the size: ";
-    cin >> n;
-    int arr[n];
-    cout << "enter the array: ";
-    for(int i=0;i<n;i++){
-        cin >> arr[i];
-    }
+void selection_sort(int arr[],int n){
     for(int i=0;i<=n-2;i++){
         int min=i;
         for(int j=i;j<=n-1;j++){
@@ -23,6 +15,17 @@ int main(){
         }
         swap(arr,min,i);
     }
+}
+int main(){
+    int n;
+    cout << "enter the size: ";
+    cin >> n;
+    int arr[n];
+    cout << "enter the array: ";
+    for(int i=0;i<n;i++){
+        cin >> arr[i];
+    }
+    selection_sort(arr,n);
     for(int i=0;i<n;i++){
         cout << arr[i] << " ";
     }
