@@ -17,6 +17,10 @@ int main(){
     for (int i=0;i<n;i++){
         mpp[arr[i]]++;
     }
+    // iterating in a map
+    for (auto it:mpp){
+        cout << it.first << "->" << it.second << endl;
+    }
     int q;
     cout << "enter the number of queries ";
     cin >> q;
@@ -25,6 +29,7 @@ int main(){
         int number;
         cout << "enter the number";
         cin >> number;
+        //fetch from  map
         cout << mpp[number] << endl;
     }
     return 0;
